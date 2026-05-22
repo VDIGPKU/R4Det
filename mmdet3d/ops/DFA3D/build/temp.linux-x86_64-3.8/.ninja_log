@@ -1,0 +1,7 @@
+# ninja log v5
+4	18976	1778641359686819148	/data1/tangyousen/bevperception/mmdet3d/ops/DFA3D/build/temp.linux-x86_64-3.8/dfa3D/ops/csrc/cuda/ms_depth_score_sample_cuda.o	91b9f7d0d5660845
+5	20013	1778641360718815936	/data1/tangyousen/bevperception/mmdet3d/ops/DFA3D/build/temp.linux-x86_64-3.8/dfa3D/ops/csrc/cuda/wms_deform_attn_cuda.o	44e6e6d6868d16b7
+5	22397	1778641363082808578	/data1/tangyousen/bevperception/mmdet3d/ops/DFA3D/build/temp.linux-x86_64-3.8/dfa3D/ops/csrc/ms_depth_score_sample.o	db760d5577ca1faf
+4	24636	1778641365322801606	/data1/tangyousen/bevperception/mmdet3d/ops/DFA3D/build/temp.linux-x86_64-3.8/dfa3D/ops/csrc/cuda/cudabind.o	e7511e3840e090f6
+20013	41984	1778641382674747629	/data1/tangyousen/bevperception/mmdet3d/ops/DFA3D/build/temp.linux-x86_64-3.8/dfa3D/ops/csrc/wms_deform_attn.o	de993ea87a1bdbbb
+18978	43468	1778641384154743026	/data1/tangyousen/bevperception/mmdet3d/ops/DFA3D/build/temp.linux-x86_64-3.8/dfa3D/ops/csrc/pybind.o	d73908e35c66ad6d

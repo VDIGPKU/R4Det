@@ -1,0 +1,10 @@
+# ninja log v5
+1	5841	1754411207000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/cpu/ms_deform_attn_cpu.o	4f0b5f9e857d6e27
+1	12466	1754411213000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/cuda/ms_deform_attn_cuda.o	9cbdd904d66cfbc4
+2	17651	1754411219000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/vision.o	bc83d903f40fc2d5
+25	7025	1760024754000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/cpu/ms_deform_attn_cpu.o	4f0b5f9e857d6e27
+26	15647	1760024763000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/cuda/ms_deform_attn_cuda.o	c8ce82a193ad0162
+26	21121	1760024768000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/vision.o	bc83d903f40fc2d5
+13	7621	1762480568000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/cpu/ms_deform_attn_cpu.o	4ab4e5807c30b0e8
+13	15831	1762480577000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/cuda/ms_deform_attn_cuda.o	277bc9dd5cfddae9
+14	20661	1762480582000000000	/data/tangyousen/bevperception/mmdet3d/ops/deformattn/build/temp.linux-x86_64-cpython-38/data/tangyousen/bevperception/mmdet3d/ops/deformattn/src/vision.o	aa3eb375c1ec898a

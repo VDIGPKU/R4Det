@@ -1,0 +1,8 @@
+# ninja log v5
+2	2173	1778672032958513821	/data1/tangyousen/bevperception/mmdet3d/ops/build/temp.linux-x86_64-3.8/bev_pool/src/bev_pool_cuda.o	10265736fc68b4d5
+2	24733	1778672055490498689	/data1/tangyousen/bevperception/mmdet3d/ops/build/temp.linux-x86_64-3.8/bev_pool/src/bev_pool.o	289644d459662501
+11	25144	1778672081294481180	/data1/tangyousen/bevperception/mmdet3d/ops/build/temp.linux-x86_64-3.8/voxel/src/voxelization.o	78b048a4438821ff
+10	25637	1778672081782480847	/data1/tangyousen/bevperception/mmdet3d/ops/build/temp.linux-x86_64-3.8/voxel/src/scatter_points_cpu.o	485e2ae886257d17
+11	25847	1778672082002480697	/data1/tangyousen/bevperception/mmdet3d/ops/build/temp.linux-x86_64-3.8/voxel/src/voxelization_cpu.o	2e826e0a538c772e
+10	43999	1778672100130468282	/data1/tangyousen/bevperception/mmdet3d/ops/build/temp.linux-x86_64-3.8/voxel/src/scatter_points_cuda.o	763dc978c386c563
+11	44286	1778672100410468089	/data1/tangyousen/bevperception/mmdet3d/ops/build/temp.linux-x86_64-3.8/voxel/src/voxelization_cuda.o	ec168aeafeb04b15

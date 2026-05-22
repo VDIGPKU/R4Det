@@ -1,0 +1,4 @@
+# ninja log v5
+4	13106	1778643228705112629	/data1/tangyousen/bevperception/mmdet3d/models/model_utils/ops/build/temp.linux-x86_64-3.8/data1/tangyousen/bevperception/mmdet3d/models/model_utils/ops/src/cpu/ms_deform_attn_cpu.o	d4ab4b874edef2ae
+5	21658	1778643237257086686	/data1/tangyousen/bevperception/mmdet3d/models/model_utils/ops/build/temp.linux-x86_64-3.8/data1/tangyousen/bevperception/mmdet3d/models/model_utils/ops/src/cuda/ms_deform_attn_cuda.o	b9490cbbbcbb97f4
+5	28210	1778643243785066884	/data1/tangyousen/bevperception/mmdet3d/models/model_utils/ops/build/temp.linux-x86_64-3.8/data1/tangyousen/bevperception/mmdet3d/models/model_utils/ops/src/vision.o	eba794d7f00178fa

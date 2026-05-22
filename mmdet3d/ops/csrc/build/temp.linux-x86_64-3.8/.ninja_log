@@ -1,0 +1,4 @@
+# ninja log v5
+2	24368	1778664056346402622	/data1/tangyousen/bevperception/mmdet3d/ops/csrc/build/temp.linux-x86_64-3.8/msmv_sampling/msmv_sampling.o	4550ba5674abe917
+355	42804	1778664341941506445	/data1/tangyousen/bevperception/mmdet3d/ops/csrc/build/temp.linux-x86_64-3.8/msmv_sampling/msmv_sampling_forward.o	49b10c782664afb9
+354	45025	1778664344153496951	/data1/tangyousen/bevperception/mmdet3d/ops/csrc/build/temp.linux-x86_64-3.8/msmv_sampling/msmv_sampling_backward.o	20fef47db8f0d76c
