@@ -141,8 +141,8 @@ Please modify the checkpoint path and configuration inside the test scripts befo
 | TJ4DRadSet | R4Det              | Coming Soon |
 | VoD        | Pretrained         | Coming Soon |
 | VoD        | R4Det              | Coming Soon |
-We recommend placing checkpoints under:
 
+We recommend placing checkpoints under:
 ```text
 checkpoints/
 ```
