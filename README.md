@@ -108,12 +108,12 @@ Please modify the checkpoint path and configuration inside the test scripts befo
 
 ## Model Zoo
 
-| Dataset    | Model              | Weights     |
-| ---------- | ------------------ | ----------- |
-| TJ4DRadSet | Pretrained         | Coming Soon |
-| TJ4DRadSet | R4Det              | Coming Soon |
-| VoD        | Pretrained         | Coming Soon |
-| VoD        | R4Det              | Coming Soon |
+| Dataset    | Model              | Weights     | Config      |
+| ---------- | ------------------ | ----------- | ----------- |
+| TJ4DRadSet | Pretrained         | Coming Soon | [`configs/r4det/TJ4D-R4Det_pretrain_2x4_12e.py`](configs/r4det/TJ4D-R4Det_pretrain_2x4_12e.py) |
+| TJ4DRadSet | R4Det              | Coming Soon | [`configs/r4det/TJ4D-R4Det_det3d_2x4_12e.py`](configs/r4det/TJ4D-R4Det_det3d_2x4_12e.py) |
+| VoD        | Pretrained         | Coming Soon | Coming Soon |
+| VoD        | R4Det              | Coming Soon | Coming Soon |
 
 We recommend placing checkpoints under:
 ```text
