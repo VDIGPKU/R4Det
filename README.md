@@ -1,22 +1,10 @@
 # R4Det
 
-[Paper](https://arxiv.org/abs/2603.11566)
+[Paper](https://arxiv.org/abs/2603.11566) | **Zhongyu Xia, Yousen Tang, Yongtao Wang, Zhifeng Wang, Weijun Qin**
 
-**Zhongyu Xia, Yousen Tang, Yongtao Wang, Zhifeng Wang, Weijun Qin**
+This repository contains the official PyTorch implementation of: **R4Det: 4D Radar-Camera Fusion for High-Performance 3D Object Detection**
 
-This repository contains the official PyTorch implementation of:
 
-> **R4Det: 4D Radar-Camera Fusion for High-Performance 3D Object Detection**
-
----
-
-## Updates
-
-* **2026/05** — Released the complete R4Det codebase on TJ4D.
-* **2026/05** — Released training and evaluation configurations.
-* **2026/03** — Released the paper on [arXiv](https://arxiv.org/abs/2603.11566).
-
----
 
 ## Introduction
 
@@ -25,21 +13,17 @@ This repository contains the official PyTorch implementation of:
 * inaccurate absolute depth estimation,
 * unstable temporal fusion under missing ego-pose information,
 * weak representation capability for sparse small-object radar returns.
-
-To address these issues, we propose **R4Det**, a unified radar-camera fusion framework for robust 3D object detection.
-
-Our framework contains three key components:
+* 
+To address these issues, we propose **R4Det**, a unified radar-camera fusion framework for robust 3D object detection. Our framework contains three key components:
 
 * **Panoramic Depth Fusion (PDF)**
   Enhances geometric depth estimation through joint absolute-relative depth modeling.
-
 * **Deformable Gated Temporal Fusion (DGTF)**
   Performs pose-free temporal alignment and gated temporal feature aggregation.
-
 * **Instance-Guided Dynamic Refinement (IGDR)**
   Uses 2D instance-aware prototypes to dynamically calibrate and purify BEV representations.
 
----
+
 
 ## Framework Overview
 
@@ -47,7 +31,6 @@ Our framework contains three key components:
   <img src="assets/overall.jpg" width="900"/>
 </p>
 
----
 
 ## Visualization
 
@@ -58,7 +41,7 @@ Our framework contains three key components:
 Qualitative comparisons on challenging driving scenarios.
 R4Det achieves more robust object localization and better small-object detection under sparse radar observations and low-light environments.
 
----
+
 
 ## Main Results
 
@@ -69,7 +52,7 @@ Experiments on both **TJ4DRadSet** and **View-of-Delft (VoD)** demonstrate the e
   <img src="assets/result2.jpg" width="700"/>
 </p>
 
----
+
 
 ## Getting Started
 
@@ -77,13 +60,8 @@ Experiments on both **TJ4DRadSet** and **View-of-Delft (VoD)** demonstrate the e
 
 The project relies on customized CUDA operators and OpenMMLab-based 3D perception modules.
 
-Please refer to:
+Please refer to **[Environment Setup Guide](docs/install.md)** for detailed installation instructions.
 
-👉 **[Environment Setup Guide](docs/install.md)**
-
-for detailed installation instructions.
-
----
 
 ### Dataset Preparation
 
@@ -92,11 +70,7 @@ We support:
 * **TJ4DRadSet**
 * **View-of-Delft (VoD)**
 
-Please refer to:
-
-👉 **[Dataset Preparation Guide](docs/dataset.md)**
-
-for dataset organization and preprocessing steps.
+Please refer to **[Dataset Preparation Guide](docs/dataset.md)** for dataset organization and preprocessing steps.
 
 ## Training
 
@@ -115,7 +89,6 @@ bash ./tools/dist_train.sh \
 
 You may replace the configuration file with your own experiment configuration.
 
----
 
 ## Evaluation
 
@@ -147,7 +120,7 @@ We recommend placing checkpoints under:
 checkpoints/
 ```
 
----
+
 
 ## Acknowledgements
 
@@ -157,7 +130,7 @@ We sincerely thank the authors of the following open-source projects:
 * MMDetection3D
 * Detectron2
 
----
+
 
 ## Citation
 
@@ -172,14 +145,9 @@ If you find this work useful for your research, please consider citing:
 }
 ```
 
----
 
 ## License
 
 This project is released for academic research purposes only.
 
-For commercial licensing requests, please contact:
-
-```text
-wyt@pku.edu.cn
-```
+For commercial licensing requests, please contact wyt@pku.edu.cn.
