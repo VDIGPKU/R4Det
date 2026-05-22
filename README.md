@@ -8,13 +8,7 @@ This repository contains the official PyTorch implementation of: **R4Det: 4D Rad
 
 ## Introduction
 
-4D radar-camera sensing has become increasingly important for autonomous driving due to its robustness under adverse weather and low-visibility conditions. However, existing radar-camera 3D object detection methods still suffer from several limitations:
-
-* inaccurate absolute depth estimation,
-* unstable temporal fusion under missing ego-pose information,
-* weak representation capability for sparse small-object radar returns.
-
-To address these issues, we propose **R4Det**, a unified radar-camera fusion framework for robust 3D object detection. Our framework contains three key components:
+**R4Det** is a unified radar-camera fusion framework for robust 3D object detection. Our framework contains three key components:
 
 * **Panoramic Depth Fusion (PDF)**
   Enhances geometric depth estimation through joint absolute-relative depth modeling.
@@ -25,21 +19,17 @@ To address these issues, we propose **R4Det**, a unified radar-camera fusion fra
 
 
 
-## Framework Overview
-
 <p align="center">
   <img src="assets/overall.jpg" width="900"/>
 </p>
 
-
-## Visualization
+Qualitative comparisons on challenging driving scenarios shows that R4Det achieves more robust object localization and better small-object detection under sparse radar observations and low-light environments.
 
 <p align="center">
   <img src="assets/vis.jpg" width="900"/>
 </p>
 
-Qualitative comparisons on challenging driving scenarios.
-R4Det achieves more robust object localization and better small-object detection under sparse radar observations and low-light environments.
+
 
 
 
