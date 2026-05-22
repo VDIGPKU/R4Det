@@ -60,7 +60,7 @@ Experiments on both **TJ4DRadSet** and **View-of-Delft (VoD)** demonstrate the e
 
 The project relies on customized CUDA operators and OpenMMLab-based 3D perception modules.
 
-Please refer to **[Environment Setup Guide](docs/install.md)** for detailed installation instructions.
+Please refer to **[Environment Setup Guide](docs/guidance/install.md)** for detailed installation instructions.
 
 
 ### Dataset Preparation
@@ -70,7 +70,7 @@ We support:
 * **TJ4DRadSet**
 * **View-of-Delft (VoD)**
 
-Please refer to **[Dataset Preparation Guide](docs/dataset.md)** for dataset organization and preprocessing steps.
+Please refer to **[Dataset Preparation Guide](docs/guidance/dataset.md)** for dataset organization and preprocessing steps.
 
 ## Training
 
