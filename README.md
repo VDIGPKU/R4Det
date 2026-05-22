@@ -13,7 +13,7 @@ This repository contains the official PyTorch implementation of: **R4Det: 4D Rad
 * inaccurate absolute depth estimation,
 * unstable temporal fusion under missing ego-pose information,
 * weak representation capability for sparse small-object radar returns.
-* 
+
 To address these issues, we propose **R4Det**, a unified radar-camera fusion framework for robust 3D object detection. Our framework contains three key components:
 
 * **Panoramic Depth Fusion (PDF)**
