@@ -55,11 +55,6 @@ Please refer to **[Environment Setup Guide](docs/guidance/install.md)** for deta
 
 ### Dataset Preparation
 
-We support:
-
-* **TJ4DRadSet**
-* **View-of-Delft (VoD)**
-
 Please refer to **[Dataset Preparation Guide](docs/guidance/dataset.md)** for dataset organization and preprocessing steps.
 
 ## Training
@@ -82,11 +77,6 @@ You may replace the configuration file with your own experiment configuration.
 
 ## Evaluation
 
-### Evaluate on View-of-Delft (VoD)
-
-```bash
-bash test_VoD.sh
-```
 
 ### Evaluate on TJ4DRadSet
 
@@ -102,8 +92,7 @@ Please modify the checkpoint path and configuration inside the test scripts befo
 | ---------- | ------------------ | ----------- | ----------- |
 | TJ4DRadSet | Pretrained         | [Hugging Face](https://huggingface.co/Hoeyy/R4Det/blob/main/pretrained_tj4d.pth) | [`configs/r4det/TJ4D-R4Det_pretrain_2x4_12e.py`](configs/r4det/TJ4D-R4Det_pretrain_2x4_12e.py) |
 | TJ4DRadSet | R4Det              | [Hugging Face](https://huggingface.co/Hoeyy/R4Det/blob/main/final_tj4d.pth) | [`configs/r4det/TJ4D-R4Det_det3d_2x4_12e.py`](configs/r4det/TJ4D-R4Det_det3d_2x4_12e.py) |
-| VoD        | Pretrained         | Coming Soon | Coming Soon |
-| VoD        | R4Det              | Coming Soon | Coming Soon |
+
 
 We recommend placing checkpoints under:
 ```text
