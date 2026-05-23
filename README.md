@@ -130,7 +130,7 @@ If you find this work useful for your research, please consider citing:
 @article{xia2026r4det,
   title={R4Det: 4D Radar-Camera Fusion for High-Performance 3D Object Detection},
   author={Xia, Zhongyu and Tang, Yousen and Wang, Yongtao and Wang, Zhifeng and Qin, Weijun},
-  journal={arXiv preprint arXiv:2603.11566},
+  journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   year={2026}
 }
 ```
