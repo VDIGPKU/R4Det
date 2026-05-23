@@ -46,6 +46,8 @@ Experiments on both **TJ4DRadSet** and **View-of-Delft (VoD)** demonstrate the e
 
 ## Getting Started
 
+[KnowVal](https://github.com/VDIGPKU/KnowVal), [HENet](https://github.com/VDIGPKU/HENet), [R4Det](https://github.com/VDIGPKU/R4Det), [RCBEVDet](https://github.com/VDIGPKU/RCBEVDet), and [TEOcc](https://github.com/VDIGPKU/TEOcc) were developed under the same framework. If you have configured the environment for any one of them, you do not need to reconfigure the environment and can easily merge these repositories into one.
+
 ### Environment Setup
 
 The project relies on customized CUDA operators and OpenMMLab-based 3D perception modules.
