@@ -17,16 +17,12 @@ We additionally generate:
 ```bash
 ln -s /your_path/view_of_delft_PUBLIC/ ./data/VoD
 
-# Generate foreground masks and annotations
 python tools/gen_panoptic_seg_vod.py
 
-# Convert png masks to npy format
 python tools/png2npy_vod.py
 
-# Generate VoD radar metadata (5-frame accumulation)
 python tools/create_data_VODradar.py
 
-# Generate VoD lidar metadata
 python tools/create_data_VODlidar.py
 ```
 
@@ -117,13 +113,10 @@ We additionally generate:
 ```bash
 ln -s /your_path/TJ4DRadSet_4DRadar/ ./data/TJ4D
 
-# Generate foreground masks and annotations
 python tools/gen_panoptic_seg_TJ4D.py
 
-# Convert png masks to npy format
 python tools/png2npy_TJ4D.py
 
-# Generate TJ4D radar metadata
 python tools/create_data_TJ4Dradar.py
 ```
 
