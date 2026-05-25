@@ -39,7 +39,7 @@ def _calculate_bev_iou(gt_boxes, pred_boxes):
     return iou_matrix
 
 
-class IFGDFusionModule(nn.Module):
+class IGDRModule(nn.Module):
     def __init__(self, bev_channels, instance_channels):
         super(IFGDFusionModule, self).__init__()
         self.bev_channels = bev_channels
@@ -62,26 +62,17 @@ class IFGDFusionModule(nn.Module):
         self.gate_conv = nn.Conv2d(1, 1, kernel_size=3, padding=1, bias=False)
 
     def forward(self, RC_BEV, E_features, S_BEV):
-
         B, C_bev, W, H = RC_BEV.shape
         N_total, C_inst, _, _ = E_features.shape
-        # (N_total, C_inst, H_pool, W_pool) -> (N_total, C_inst)
         E_pooled = E_features.mean(dim=[-1, -2])
-        # (N_total, C_inst) -> (N_total, C_inst, 1, 1) -> (N_total, C_inst)
         E_proj = self.project_layer(E_pooled.unsqueeze(-1).unsqueeze(-1)).squeeze(-1).squeeze(-1)
-        #  S_BEV (B, N, H, W) -> (B, N, W, H)
         S_BEV_permuted = S_BEV.permute(0, 1, 3, 2).contiguous()
         T=0.01
-        A_prob = F.softmax(S_BEV_permuted / T, dim=1)  # (B, N_total, W, H)
-        # (B, N_total, W*H) -> (B, W*H, N_total)
+        A_prob = F.softmax(S_BEV_permuted / T, dim=1)
         A_flat = A_prob.view(B, N_total, -1).permute(0, 2, 1)
-        # (N_total, C_inst) -> (B, N_total, C_inst)
         E_proj_batch = E_proj.unsqueeze(0).expand(B, -1, -1)
-        # (B, W*H, N_total) @ (B, N_total, C_inst) -> (B, W*H, C_inst)
         E_BEV_flat = torch.bmm(A_flat, E_proj_batch)
-        # (B, W*H, C_inst) -> (B, C_inst, W, H)
         E_BEV = E_BEV_flat.permute(0, 2, 1).view(B, C_inst, W, H)
-        # (B, C_inst, W, H) -> (B, C_bev, W, H)
         gamma_BEV = self.conv_gamma(E_BEV)
         beta_BEV = self.conv_beta(E_BEV)
         F_fixed = RC_BEV * gamma_BEV + beta_BEV
@@ -297,7 +288,7 @@ class R4Det(MVXFasterRCNN):
         if self.freeze_radars: self.freeze_pts_model()
         self.record_fps = {'num': 0, 'time': 0}
         self.init_visulization()
-        self.ifgd_fusion = IFGDFusionModule(
+        self.igdr_fusion = IGDRModule(
             bev_channels=self.img_channels,
             instance_channels=self.img_channels
         )
@@ -966,7 +957,7 @@ class R4Det(MVXFasterRCNN):
             sampling_results_test = [DummySamplingResult(0) for _ in range(len(img_metas))]
 
         pts_feats_refined_list = pts_feats
-        if instance_features_test is not None and instance_features_test.shape[0] > 0 and self.ifgd_fusion:
+        if instance_features_test is not None and instance_features_test.shape[0] > 0 and self.igdr_fusion:
             S_BEV = self._build_bev_instance_map(
                 img_metas=img_metas,
                 precise_depth=precise_depth,
@@ -978,7 +969,7 @@ class R4Det(MVXFasterRCNN):
             )
             RC_BEV = pts_feats_refined_list[0]  # (B, C_bev, W, H)
             E_features = instance_features_test
-            fused_bev_feat = self.ifgd_fusion(RC_BEV, E_features, S_BEV)
+            fused_bev_feat = self.igdr_fusion(RC_BEV, E_features, S_BEV)
             pts_feats = [fused_bev_feat]
 
 
@@ -1190,7 +1181,7 @@ class R4Det(MVXFasterRCNN):
                     sampling_results_for_fusion = [DummySamplingResult(n) for n in num_rois_per_img]
 
         pts_feats_refined_list = pts_feats
-        if instance_features_for_fusion is not None and instance_features_for_fusion.shape[0] > 0 and self.ifgd_fusion and indexed_pred_masks_for_fusion is not None:
+        if instance_features_for_fusion is not None and instance_features_for_fusion.shape[0] > 0 and self.igdr_fusion and indexed_pred_masks_for_fusion is not None:
             precise_depth = feature_dict['precise_depth']
 
             S_BEV = self._build_bev_instance_map(
@@ -1205,7 +1196,7 @@ class R4Det(MVXFasterRCNN):
 
             RC_BEV = pts_feats_refined_list[0]  # (B, C_bev, W, H)
             E_features = instance_features_for_fusion
-            fused_bev_feat = self.ifgd_fusion(RC_BEV, E_features, S_BEV)
+            fused_bev_feat = self.igdr_fusion(RC_BEV, E_features, S_BEV)
             pts_feats = [fused_bev_feat]
         outs_pts = None
         if self.use_box3d_supervision and gt_bboxes_3d is not None:

@@ -15,9 +15,8 @@ logs/
 *.pth
 *.ckpt
 
-# datasets（如果不想上传）
+# datasets
 data/
-datasets/
 
 # OS
 .DS_Store
