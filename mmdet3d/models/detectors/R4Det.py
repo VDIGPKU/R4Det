@@ -41,7 +41,7 @@ def _calculate_bev_iou(gt_boxes, pred_boxes):
 
 class IGDRModule(nn.Module):
     def __init__(self, bev_channels, instance_channels):
-        super(IFGDFusionModule, self).__init__()
+        super(IGDRModule, self).__init__()
         self.bev_channels = bev_channels
         self.instance_channels = instance_channels
         if bev_channels != instance_channels:
