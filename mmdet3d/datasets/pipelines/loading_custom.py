@@ -141,7 +141,7 @@ class GenerateBevFromBoxes(object):
 
         self.save_vis = save_vis
         if self.save_vis:
-            self.debug_vis_path = '/data/yourpath/bevperception/bev_box_final'
+            self.debug_vis_path = '/data/tangyousen/bevperception/bev_box_final'
 
     def estimate_depth(self, v_bottom):
         y_max = self.depth_heuristic['y_max']
@@ -234,8 +234,8 @@ from mmdet.core.evaluation.bbox_overlaps import bbox_overlaps
 class LoadVLSAMAnnotations(object):
 
     def __init__(self,
-                 ann_root_path='/data/yourpath/TJ4DRadSet_4DRadar/annotations/',
-                 mask_root_path='/data/yourpath/TJ4DRadSet_4DRadar/',
+                 ann_root_path='/data/tangyousen/TJ4DRadSet_4DRadar/annotations/',
+                 mask_root_path='/data/tangyousen/TJ4DRadSet_4DRadar/',
                  class_map={'Pedestrian': 0, 'Cyclist': 1, 'Car': 2, 'Truck': 3},
                  iou_threshold=0.1):
         self.ann_root_path = ann_root_path
@@ -245,7 +245,7 @@ class LoadVLSAMAnnotations(object):
         print(f"Initialized Custom LoadVLSAMAnnotations with IoU threshold: {self.iou_threshold}")
 
     def __call__(self, results):
-        debug_save_path='/data/yourpath/TJ4DRadSet_4DRadar/debug_matched_masks/'
+        debug_save_path='/data/tangyousen/TJ4DRadSet_4DRadar/debug_matched_masks/'
         if 'gt_bboxes' not in results or 'gt_labels' not in results:
             raise KeyError("Official 'gt_bboxes' and 'gt_labels' not found in results. "
                            "Ensure LoadAnnotations3D runs before this pipeline step and with_bbox/with_label is True.")
@@ -338,15 +338,14 @@ class LoadVLSAMAnnotations(object):
         if 'gt_masks' not in results['mask_fields']: results['mask_fields'].append('gt_masks')
 
 
-        print("=" * 30 + "\n")
         return results
 
 @PIPELINES.register_module()
 class LoadVLSAMAnnotationsvod(object):
 
     def __init__(self,
-                 ann_root_path='/data/yourpath/view-of-delft_PUBLIC/view_of_delft_PUBLIC/lidar/training/annotations/',
-                 mask_root_path='/data/yourpath/view-of-delft_PUBLIC/view_of_delft_PUBLIC/lidar/training/',
+                 ann_root_path='/data/tangyousen/view-of-delft_PUBLIC/view_of_delft_PUBLIC/lidar/training/annotations/',
+                 mask_root_path='/data/tangyousen/view-of-delft_PUBLIC/view_of_delft_PUBLIC/lidar/training/',
                  class_map={'Pedestrian': 0, 'Cyclist': 1, 'Car': 2},
                  iou_threshold=0.1):
         self.ann_root_path = ann_root_path
@@ -356,7 +355,7 @@ class LoadVLSAMAnnotationsvod(object):
         print(f"Initialized Custom LoadVLSAMAnnotations with IoU threshold: {self.iou_threshold}")
 
     def __call__(self, results):
-        debug_save_path='/data/yourpath/view-of-delft_PUBLIC/view_of_delft_PUBLIC/radar_5frames/debug_matched_masks/'
+        debug_save_path='/data/tangyousen/view-of-delft_PUBLIC/view_of_delft_PUBLIC/radar_5frames/debug_matched_masks/'
 
         if 'gt_bboxes' not in results or 'gt_labels' not in results:
             raise KeyError("Official 'gt_bboxes' and 'gt_labels' not found in results. "
@@ -452,6 +451,5 @@ class LoadVLSAMAnnotationsvod(object):
         if 'gt_masks' not in results['mask_fields']: results['mask_fields'].append('gt_masks')
 
 
-        print("=" * 30 + "\n")
         #exit(0)
         return results
