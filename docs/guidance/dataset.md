@@ -8,9 +8,9 @@ Download the official View-of-Delft dataset from:
 
 We additionally generate:
 
-- foreground masks
+- instance masks
 - annotation masks
-- radar depth supervision files
+- depth supervision files
 
 ### Preparation
 
@@ -85,9 +85,9 @@ VoD
 
 | Folder | Description |
 |---|---|
-| `masks/` | foreground masks |
+| `masks/` | instance masks |
 | `annotations/` | annotation masks |
-| `depth_npy_predict/` | radar-guided depth supervision |
+| `depth_npy_predict/` | depth supervision |
 
 ---
 
@@ -101,9 +101,9 @@ Since the LiDAR version has not yet been publicly released, we use radar depth m
 
 We additionally generate:
 
-- foreground masks
+- instance masks
 - annotation masks
-- radar depth supervision files
+- depth supervision files
 
 ### Preparation
 
@@ -170,15 +170,15 @@ TJ4D
 
 | Folder | Description |
 |---|---|
-| `masks/` | foreground masks |
+| `masks/` | instance masks |
 | `annotations/` | annotation masks |
-| `depth_npy_predict/` | radar-guided depth supervision |
+| `depth_npy_predict/` | depth supervision |
 
 ---
 
 ## Notes
 
-- `depth_npy_predict/` is required for radar depth supervision.
+- `depth_npy_predict/` is required for depth supervision.
 - `masks/` and `annotations/` are required for segmentation-guided training.
 - All preprocessing scripts are located in the `tools/` directory.
 - The generated `.pkl` info files are required before training.
