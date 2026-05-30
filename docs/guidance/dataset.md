@@ -1,5 +1,11 @@
 # Dataset Preparation
 
+Additional generated files (including instance masks, annotation masks, depth supervision files, and preprocessed .pkl metadata) can be downloaded directly from our Hugging Face repository:
+
+👉 [Hugging Face Repository](https://huggingface.co/Hoeyy/R4Det/tree/main)
+
+If you use the provided processed files, you may skip the corresponding preprocessing steps below.
+
 ## View-of-Delft (VoD)
 
 Download the official View-of-Delft dataset from:
