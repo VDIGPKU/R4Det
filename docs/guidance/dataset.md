@@ -49,18 +49,14 @@ VoD
 │   │   ├── velodyne
 │   │   └── velodyne_reduced
 │   │
-│   ├── testing
-│   │   ├── calib
-│   │   ├── image_2
-│   │   └── velodyne
-│   │
-│   ├── vod_infos_train.pkl
-│   ├── vod_infos_val.pkl
-│   ├── vod_infos_test.pkl
-│   └── vod_infos_trainval.pkl
+│   └── testing
+│       ├── calib
+│       ├── image_2
+│       └── velodyne
+│   
 │
 ├── radar_5frames
-│   ├── ImageSets -> ../lidar/ImageSets
+│   ├── ImageSets
 │   │
 │   ├── training
 │   │   ├── calib
@@ -81,6 +77,7 @@ VoD
 │   ├── vod_infos_test.pkl
 │   └── vod_infos_trainval.pkl
 │
+├── segmentation
 └── ...
 ```
 
@@ -152,13 +149,13 @@ TJ4D
 │   │
 │   ├── velodyne_reduced
 │   │
-│   ├── depth_npy_predict
-│   │
-│   └── masks
+│   └── depth_npy_predict
 │
 ├── annotations
 │
 ├── masks
+│
+├── segmentation
 │
 ├── Video_Demo
 │   ├── seq04.mp4
